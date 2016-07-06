@@ -16,6 +16,20 @@ describe('String class extension', function() {
   });
 
 
+  describe('toUpperCase test', function() {
+    it('should return the string in uppercase', function() {
+      expect('hello'.toUpper()).toBe('HELLO');
+    });
+  });
+
+
+  describe('toLowerCase test', function() {
+    it('should return a string in lowercase', function() {
+      expect('HELLO'.toLower()).toBe('hello');
+    });
+  });
+
+
   describe('isQuestion test', function() {
     it('should return true if the last character is a question mark', function() {
       expect('hello?'.isQuestion()).toBe(true);
@@ -48,5 +62,19 @@ describe('String class extension', function() {
       expect(typeof 'Panda panda panda'.wordCount()).toBe('number');
     });
   });
+
+  describe('number to currency test', function() {
+    it('returs a currency representation of the string', function() {
+      expect('12000'.toCurrency()).toBe(12, 000);
+    });
+  });
+
+
+  describe('currency to number test', function() {
+    it('should return the number representation of the currency string', function() {
+      expect('12,000'.fromCurrency()).toBe(12000);
+    });
+  });
+
 
 });

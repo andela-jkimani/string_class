@@ -3,6 +3,35 @@ String.prototype.hasVowels = function() {
   var result = (/([aAeEiIoOuU])\w/g).test(this);
   return result;
 };
+//returns a string in uppercase where applicable
+String.prototype.toUpper = function() {
+  var convertedString = [];
+
+  for (var i = 0; i < this.length; i++) {
+    if (this.charCodeAt(i) >= 97 && this.charCodeAt(i) <= 122) {
+      var code = String.fromCharCode(this.charCodeAt(i) - 32);
+      convertedString.push(code);
+    } else {
+      convertedString.push(a[i]);
+    }
+  }
+  return convertedString.join('');
+};
+
+//returns string in lowercase as applicable
+String.prototype.toLower = function() {
+  var convertedString = [];
+
+  for (var i = 0; i < this.length; i++) {
+    if (this.charCodeAt(i) >= 65 && this.charCodeAt(i) <= 90) {
+      var code = String.fromCharCode(this.charCodeAt(i) + 32);
+      convertedString.push(code);
+    } else {
+      convertedString.push(a[i]);
+    }
+  }
+  return convertedString.join('');
+};
 
 //returns true if string ends with a question mark
 String.prototype.isQuestion = function() {
