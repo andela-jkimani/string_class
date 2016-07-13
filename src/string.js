@@ -4,20 +4,23 @@ String.prototype.hasVowels = function() {
 };
 //returns a string in uppercase where applicable
 String.prototype.toUpper = function() {
+
   return this.replace(/[a-z]/g, function(val) {
   	return (String.fromCharCode(val.charCodeAt() - 32));
   });
+
 };
 
 //returns string in lowercase as applicable
 String.prototype.toLower = function() {
+
   return this.replace(/[A-Z]/g, function(val) {
   	return (String.fromCharCode(val.charCodeAt() + 32));
   });
+
 };
 
 String.prototype.ucFirst = function() {
-	
   return this.substr(0, 1).toUpper() + this.substr(1, (this.length - 1));
 };
 
@@ -28,6 +31,7 @@ String.prototype.isQuestion = function() {
 
 //returns list of words in the string as an array
 var wordsArray;
+
 String.prototype.words = function() {
   return this.replace(/\W+/g, ' ').trim().split(' ');
 };
@@ -40,7 +44,7 @@ String.prototype.wordCount = function() {
 //returns currency representation of the string
 String.prototype.toCurrency = function() {
   var number = Number(this).toFixed(2);
-  return number.replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+  return number.replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };
 
 //returns a number representation from the currency string
