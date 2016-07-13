@@ -4,22 +4,19 @@ String.prototype.hasVowels = function() {
 };
 //returns a string in uppercase where applicable
 String.prototype.toUpper = function() {
-
   return this.replace(/[a-z]/g, function(val) {
   	return (String.fromCharCode(val.charCodeAt() - 32));
   });
-
 };
 
 //returns string in lowercase as applicable
 String.prototype.toLower = function() {
-
   return this.replace(/[A-Z]/g, function(val) {
   	return (String.fromCharCode(val.charCodeAt() + 32));
   });
-
 };
 
+//returns first character of string in uppercase
 String.prototype.ucFirst = function() {
   return this.substr(0, 1).toUpper() + this.substr(1, (this.length - 1));
 };
