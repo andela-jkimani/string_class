@@ -2,6 +2,7 @@
 String.prototype.hasVowels = function() {
   return (/([aeiou])\w/gi).test(this);
 };
+
 //returns a string in uppercase where applicable
 String.prototype.toUpper = function() {
   return this.replace(/[a-z]/g, function(val) {
