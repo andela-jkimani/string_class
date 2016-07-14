@@ -1,53 +1,57 @@
-//return true if string contains vowels
-String.prototype.hasVowels = function() {
-  return (/([aeiou])\w/gi).test(this);
-};
+(function() {
+	'use strict';
 
-//returns a string in uppercase where applicable
-String.prototype.toUpper = function() {
-  return this.replace(/[a-z]/g, function(val) {
-  	return (String.fromCharCode(val.charCodeAt() - 32));
-  });
-};
+	//return true if string contains vowels
+	String.prototype.hasVowels = function() {
+	  return (/([aeiou])\w/gi).test(this);
+	};
 
-//returns string in lowercase as applicable
-String.prototype.toLower = function() {
-  return this.replace(/[A-Z]/g, function(val) {
-  	return (String.fromCharCode(val.charCodeAt() + 32));
-  });
-};
+	//returns a string in uppercase where applicable
+	String.prototype.toUpper = function() {
+	  return this.replace(/[a-z]/g, function(val) {
+	  	return (String.fromCharCode(val.charCodeAt() - 32));
+	  });
+	};
 
-//returns first character of string in uppercase
-String.prototype.ucFirst = function() {
-  return this.substr(0, 1).toUpper() + this.substr(1, (this.length - 1));
-};
+	//returns string in lowercase as applicable
+	String.prototype.toLower = function() {
+	  return this.replace(/[A-Z]/g, function(val) {
+	  	return (String.fromCharCode(val.charCodeAt() + 32));
+	  });
+	};
 
-//returns true if string ends with a question mark
-String.prototype.isQuestion = function() {
-  return /[?]$/.test(this);
-};
+	//returns first character of string in uppercase
+	String.prototype.ucFirst = function() {
+	  return this.substr(0, 1).toUpper() + this.substr(1, (this.length - 1));
+	};
 
-//returns list of words in the string as an array
-var wordsArray;
+	//returns true if string ends with a question mark
+	String.prototype.isQuestion = function() {
+	  return /[?]$/.test(this);
+	};
 
-String.prototype.words = function() {
-  return this.replace(/\W+/g, ' ').trim().split(' ');
-};
+	//returns list of words in the string as an array
+	var wordsArray;
 
-//returns the number of words in the string
-String.prototype.wordCount = function() {
-  return (this.words()).length;
-};
+	String.prototype.words = function() {
+	  return this.replace(/\W+/g, ' ').trim().split(' ');
+	};
 
-//returns currency representation of the string
-String.prototype.toCurrency = function() {
-  var number = Number(this).toFixed(2);
-  return number.replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
-};
+	//returns the number of words in the string
+	String.prototype.wordCount = function() {
+	  return (this.words()).length;
+	};
 
-//returns a number representation from the currency string
-String.prototype.fromCurrency = function() {
-  var integer = this.replace(/,/g, '');
-  return Number(integer);
-};
+	//returns currency representation of the string
+	String.prototype.toCurrency = function() {
+	  var number = Number(this).toFixed(2);
+	  return number.replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+	};
 
+	//returns a number representation from the currency string
+	String.prototype.fromCurrency = function() {
+	  var integer = this.replace(/,/g, '');
+	  return Number(integer);
+	};
+
+}) ();
