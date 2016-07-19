@@ -19,6 +19,9 @@ describe('String class extension', function() {
   describe('toUpperCase test', function() {
     it('should return the string in uppercase', function() {
       expect('hello'.toUpper()).toBe('HELLO');
+      expect('123'.toUpper()).toBe('123');
+      expect('123abc'.toUpper()).toBe('123ABC');
+      expect('123aBC'.toUpper()).toBe('123ABC');
     });
   });
 
@@ -26,6 +29,9 @@ describe('String class extension', function() {
   describe('toLowerCase test', function() {
     it('should return a string in lowercase', function() {
       expect('HELLO'.toLower()).toBe('hello');
+      expect('123'.toLower()).toBe('123');
+      expect('123ABC'.toLower()).toBe('123abc');
+      expect('123aBC'.toLower()).toBe('123abc');
     });
   });
 
@@ -33,7 +39,7 @@ describe('String class extension', function() {
     it('should return a string with the first character as uppercase', function() {
       expect('jacky'.ucFirst()).toBe('Jacky');
       expect('hello jacky'.ucFirst()).toBe('Hello jacky');
-      expect('Hello jacky'.ucFirst()).toBe('Hello jacky');
+      expect('HelLo jacky'.ucFirst()).toBe('HelLo jacky');
     });
   });
 
