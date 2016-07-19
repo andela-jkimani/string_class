@@ -2,16 +2,16 @@ describe('String class extension', function() {
 
   describe('vowels test', function() {
     it('should return true if string contains vowels', function() {
-      expect('hello'.hasVowels()).toBe(true);
-      expect('aeiou'.hasVowels()).toBe(true);
-      expect('hEllo'.hasVowels()).toBe(true);
+      expect('hello'.hasVowels()).toBeTruthy();
+      expect('aeiou'.hasVowels()).toBeTruthy();
+      expect('hEllo'.hasVowels()).toBeTruthy();
     });
 
     it('should return false if string does not contain vowels', function() {
-      expect('qqwv'.hasVowels()).toBe(false);
-      expect('KLNM'.hasVowels()).toBe(false);
-      expect('X yd'.hasVowels()).toBe(false);
-      expect('BS!!!'.hasVowels()).toBe(false);
+      expect('qqwv'.hasVowels()).toBeFalsy();
+      expect('KLNM'.hasVowels()).toBeFalsy();
+      expect('X yd'.hasVowels()).toBeFalsy();
+      expect('BS!!!'.hasVowels()).toBeFalsy();
     });
   });
 
@@ -44,17 +44,24 @@ describe('String class extension', function() {
     });
   });
 
+  describe('Upper case first in each string', function() {
+  	it('should return all strings with the first character as uppercase', function() {
+  		expect('hi jacky'.toTitleCase()).toBe('Hi Jacky');
+  		expect('123 jacky is awesome'.toTitleCase()).toBe('123 Jacky Is Awesome');
+  	});
+  });
+
   describe('isQuestion test', function() {
     it('should return true if the last character is a question mark', function() {
-      expect('hello?'.isQuestion()).toBe(true);
-      expect('A girl has no name, right?'.isQuestion()).toBe(true);
-      expect('Where ?'.isQuestion()).toBe(true);
+      expect('hello?'.isQuestion()).toBeTruthy();
+      expect('A girl has no name, right?'.isQuestion()).toBeTruthy();
+      expect('Where ?'.isQuestion()).toBeTruthy();
     });
 
     it('should return false if the last character is not a question mark', function() {
-      expect('hello'.isQuestion()).toBe(false);
-      expect('he?llo'.isQuestion()).toBe(false);
-      expect('Hi? Jacky'.isQuestion()).toBe(false);
+      expect('hello'.isQuestion()).toBeFalsy();
+      expect('he?llo'.isQuestion()).toBeFalsy();
+      expect('Hi? Jacky'.isQuestion()).toBeFalsy();
     });
   });
 
