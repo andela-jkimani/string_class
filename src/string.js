@@ -3,7 +3,7 @@
 
 	//return true if string contains vowels
 	String.prototype.hasVowels = function() {
-	  return (/([aeiou])\w/gi).test(this);
+	  return (/([aeiou])/gi).test(this);
 	};
 
 	//returns a string in uppercase where applicable
