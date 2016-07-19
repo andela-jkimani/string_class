@@ -40,14 +40,15 @@ describe('String class extension', function() {
       expect('jacky'.ucFirst()).toBe('Jacky');
       expect('hello jacky'.ucFirst()).toBe('Hello jacky');
       expect('HelLo jacky'.ucFirst()).toBe('HelLo jacky');
+      expect('123jacky'.ucFirst()).toBe('123jacky');
     });
   });
 
   describe('isQuestion test', function() {
     it('should return true if the last character is a question mark', function() {
       expect('hello?'.isQuestion()).toBe(true);
-      expect('A girl has no name, right?');
-      expect('Where ?');
+      expect('A girl has no name, right?'.isQuestion()).toBe(true);
+      expect('Where ?'.isQuestion()).toBe(true);
     });
 
     it('should return false if the last character is not a question mark', function() {
@@ -63,6 +64,7 @@ describe('String class extension', function() {
       expect('hi jacky'.words()).toEqual(['hi', 'jacky']);
       expect('Sasa'.words()).toEqual(['Sasa']);
       expect('1 dance'.words()).toEqual(['1', 'dance']);
+      expect('Hello Jacky. How have*you been? Good?'.words()).toEqual(['Hello', 'Jacky', 'How', 'have', 'you', 'been', 'Good']);
       expect(typeof 'Andela'.words()).toBe('object');
     });
   });
