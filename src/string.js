@@ -20,9 +20,11 @@
 	  });
 	};
 
-	//returns first character of string in uppercase
+	// returns first character of string in uppercase
 	String.prototype.ucFirst = function() {
-	  return this.substr(0, 1).toUpper() + this.substr(1, (this.length - 1));
+	  return this.replace(/(^\S)/g, function(val){
+	  	return val.toUpper();
+	  });
 	};
 
 	//returns true if string ends with a question mark
@@ -31,8 +33,6 @@
 	};
 
 	//returns list of words in the string as an array
-	var wordsArray;
-
 	String.prototype.words = function() {
 	  return this.replace(/\W+/g, ' ').trim().split(' ');
 	};
