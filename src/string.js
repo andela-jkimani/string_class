@@ -20,7 +20,7 @@
 	  });
 	};
 
-	// returns first character of string in uppercase
+	//returns first character of string in uppercase
 	String.prototype.ucFirst = function() {
 	  return this.replace(/(^\S)/g, function(val){
 	  	return val.toUpper();
