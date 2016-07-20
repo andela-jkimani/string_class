@@ -57,8 +57,7 @@
 
 	//returns a number representation from the currency string
 	String.prototype.fromCurrency = function() {
-	  var integer = this.replace(/,/g, '');
-	  return Number(integer);
+	  return Number(this.replace(/,/g, ''));
 	};
 
 }) ();
