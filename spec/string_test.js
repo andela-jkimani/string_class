@@ -1,6 +1,11 @@
 describe('String class extension', function() {
 
   describe('vowels test', function() {
+  	it('should return a boolean value', function() {
+  		expect('hi'.hasVowels()).toBe(true);
+  		expect('dwgb'.hasVowels()).toBe(false);
+  	});
+
     it('should return true if string contains vowels', function() {
       expect('hello'.hasVowels()).toBeTruthy();
       expect('aeiou'.hasVowels()).toBeTruthy();
