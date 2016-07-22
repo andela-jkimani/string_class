@@ -20,7 +20,6 @@ describe('String class extension', function() {
     });
   });
 
-
   describe('toUpperCase test', function() {
     it('should return the string in uppercase', function() {
       expect('hello'.toUpper()).toBe('HELLO');
@@ -29,7 +28,6 @@ describe('String class extension', function() {
       expect('123aBC'.toUpper()).toBe('123ABC');
     });
   });
-
 
   describe('toLowerCase test', function() {
     it('should return a string in lowercase', function() {
@@ -44,7 +42,7 @@ describe('String class extension', function() {
     it('should return a string with the first character as uppercase', function() {
       expect('jacky'.ucFirst()).toBe('Jacky');
       expect('hello jacky'.ucFirst()).toBe('Hello jacky');
-      expect('HelLo jacky'.ucFirst()).toBe('HelLo jacky');
+      expect('Hello jacky'.ucFirst()).toBe('Hello jacky');
       expect('123jacky'.ucFirst()).toBe('123jacky');
     });
   });
@@ -70,7 +68,6 @@ describe('String class extension', function() {
     });
   });
 
-
   describe('words list test', function() {
     it('should return a list of the words in the string', function() {
       expect('hi jacky'.words()).toEqual(['hi', 'jacky']);
@@ -81,7 +78,6 @@ describe('String class extension', function() {
     });
   });
 
-
   describe('number of words test', function() {
     it('should return the number of words in the string', function() {
       expect('hello jacky'.wordCount()).toBe(2);
@@ -91,13 +87,12 @@ describe('String class extension', function() {
   });
 
   describe('number to currency test', function() {
-    it('returs a currency representation of the string', function() {
+    it('returns a currency representation of the string', function() {
       expect('100'.toCurrency()).toBe('100.00');
       expect('12000'.toCurrency()).toBe('12,000.00');
       expect('1000900876.11'.toCurrency()).toBe('1,000,900,876.11');
     });
   });
-
 
   describe('currency to number test', function() {
     it('should return the number representation of the currency string', function() {
