@@ -1,5 +1,5 @@
 # String Class
-Extends the string methodds with custom methods.
+Extends the string methods with custom methods.
 
 ### The methods include:
 
