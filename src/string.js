@@ -25,6 +25,7 @@
     });
   };
 
+  // returns the first character of each word in the string in uppercase
   String.prototype.toTitleCase = function () {
     return this.replace(/((\b)([a-z]))/g, function(val) {
       return val.toUpper();
