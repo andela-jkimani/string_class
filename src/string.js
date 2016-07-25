@@ -34,7 +34,7 @@
 		});
 	};
 
-	//returns true if string ends with a question mark
+	//returns true if string ends with a question mark.
 	String.prototype.isQuestion = function() {
 	  return /[?]$/.test(this);
 	};
