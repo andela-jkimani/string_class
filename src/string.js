@@ -29,6 +29,7 @@
 
 	//return each string with the first character in uppercase
 	String.prototype.toTitleCase = function() {
+		//do something
 		return this.replace(/((\b)([a-z]))/g, function(val) {
 			return val.toUpper();
 		});
