@@ -100,6 +100,4 @@ describe('String class extension', function() {
       expect('1,000,900,876.11'.fromCurrency()).toBe(1000900876.11);
     });
   });
-
-
 });
