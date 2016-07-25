@@ -27,6 +27,12 @@
     });
   };
 
+	String.prototype.toTitleCase = function() {
+		return this.replace(/((\b)([a-z]))/g, function(val) {
+			return val.toUpper();
+		});
+	};
+
   //returns true if string ends with a question mark.
   String.prototype.isQuestion = function() {
     return /[?]$/.test(this);
