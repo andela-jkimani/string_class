@@ -1,10 +1,10 @@
 describe('String class extension', function() {
 
   describe('vowels test', function() {
-  	it('should return a boolean value', function() {
-  		expect('hi'.hasVowels()).toBe(true);
-  		expect('dwgb'.hasVowels()).toBe(false);
-  	});
+    it('should return a boolean value', function() {
+      expect('hi'.hasVowels()).toBe(true);
+      expect('dwgb'.hasVowels()).toBe(false);
+    });
 
     it('should return true if string contains vowels', function() {
       expect('hello'.hasVowels()).toBeTruthy();
@@ -48,10 +48,10 @@ describe('String class extension', function() {
   });
 
   describe('Upper case first in each string', function() {
-  	it('should return all strings with the first character as uppercase', function() {
-  		expect('hi jacky'.toTitleCase()).toBe('Hi Jacky');
-  		expect('123 jacky is awesome'.toTitleCase()).toBe('123 Jacky Is Awesome');
-  	});
+    it('should return all strings with the first character as uppercase', function() {
+      expect('hi jacky'.toTitleCase()).toBe('Hi Jacky');
+      expect('123 jacky is awesome'.toTitleCase()).toBe('123 Jacky Is Awesome');
+    });
   });
 
   describe('isQuestion test', function() {
