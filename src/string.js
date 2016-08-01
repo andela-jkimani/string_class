@@ -57,5 +57,4 @@
   String.prototype.fromCurrency = function () {
     return Number(this.replace(/,/g, ''));
   };
-
 })();

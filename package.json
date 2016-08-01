@@ -1,0 +1,31 @@
+{
+  "name": "string_class",
+  "version": "1.0.0",
+  "description": "Extension of the string class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "istanbul cover --include-all-sources jasmine-node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-jkimani/string_class.git"
+  },
+  "author": "Jacky Kimani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-jkimani/string_class/issues"
+  },
+  "homepage": "https://github.com/andela-jkimani/string_class#readme",
+  "devDependencies": {
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-safari-launcher": "^1.0.0"
+  },
+  "dependencies": {
+    "istanbul": "^0.4.4",
+    "jasmine-node": "^1.14.5"
+  }
+}
